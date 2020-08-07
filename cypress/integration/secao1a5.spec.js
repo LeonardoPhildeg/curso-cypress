@@ -1,4 +1,4 @@
-describe('curso parte 1', () => {
+describe('curso secao 1 a 5', () => {
     beforeEach(() => {
         cy.visit('https://wcaquino.me/cypress/componentes.html')
     })
@@ -90,7 +90,7 @@ describe('curso parte 1', () => {
             })
 
     })
-    it.only('deve localizar o combo multiplo', ()=> {
+    it('deve localizar o combo multiplo', ()=> {
         cy.get('#formEsportes')
             .select(['natacao', 'Corrida'])//seleciona múltiplos valores pelo combo
 
