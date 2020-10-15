@@ -40,7 +40,7 @@ describe('Seção 9 - Teste funcional da aplicação do Seu Barriga', () => {
     })
 
     it('Inserir movimentação', () => {
-        cy.inserirMovimentacao('aluguel', '100', 'Sr Barriga')
+        cy.inserirMovimentacao('aluguel', '100', 'Sr Barriga', 'Conta para movimentacoes')
 
         cy.get('.toast-message')
             .should('contain', 'Movimentação inserida com sucesso!')

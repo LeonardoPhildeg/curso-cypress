@@ -14,12 +14,12 @@ Cypress.Commands.add('inserirConta', (conta) => {
     cy.get(contas.BTN_SALVAR).click()
 })
 
-Cypress.Commands.add('inserirMovimentacao', (descricao, valor, interessado) => {
+Cypress.Commands.add('inserirMovimentacao', (descricao, valor, interessado, conta) => {
     cy.get(menu.MOVIMENTACAO).click()
     cy.get(movimentacao.DESCRICAO).type(descricao)
     cy.get(movimentacao.INTERESSADO).type(interessado)
     cy.get(movimentacao.VALOR).type(valor)
-    cy.get(movimentacao.CONTA).select('Conta para movimentacoes')
+    cy.get(movimentacao.CONTA).select(conta)
     cy.get(movimentacao.STATUS).click()
     cy.get(movimentacao.BTN_SALVAR).click()
 })
